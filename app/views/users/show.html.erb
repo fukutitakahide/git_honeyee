@@ -1,0 +1,13 @@
+<div class="contents_show">
+    <h1 class="toukou"><%= @nickname %>さんの投稿一覧</h1>
+
+    <div class="contents_row">
+    <% @tweet.each do |tweet| %>
+        <div class="contents_post" style="background-image: url(<%= tweet.image %>); background-size: cover;height: 300px;">
+            <div class="show-text">
+            <%= simple_format(tweet.text) %>
+            </div>
+    </div>
+    <% end %>
+     <% paginate(@tweet) %>
+</div>

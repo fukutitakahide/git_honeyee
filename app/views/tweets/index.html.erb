@@ -1,0 +1,42 @@
+    
+    <div class="top-image">
+    <%= image_tag 's_shop.jpg' ,size: "", :alt => 'coffe Photo'  %>
+    </div>
+    
+    <div class="contents_row">
+    
+     <% @tweet.each do|tweet| %>
+    <div class="contents_post" style="background-image: url(<%= tweet.image %>); background-size: cover; height: 300px;">
+        
+        
+        
+        <% if user_signed_in? && current_user.id == tweet.user_id %>
+
+        
+        <div class="list">
+            <ul class="more_list">
+                <li>
+                    <%= link_to '編集', "/tweets/#{tweet.id}/edit", method: :get,class:"btn-square" %>
+                </li>
+                <li>
+                    <%= link_to '削除', "/tweets/#{tweet.id}", method: :delete,class:"btn-square"%>
+                </li>
+            </ul>        
+        </div>
+        
+     <% end %>
+
+        <div class="name">
+        <%= simple_format(tweet.text) %>
+            <a href="/users/<%= tweet.user_id %>">
+            <span>投稿者</span><%= tweet.user.nickname %>
+            </a>
+        </div>
+    </div>
+        <% end %>
+    
+  </div>
+  
+  <div class="page">
+<%= paginate(@tweet) %>
+    </div>

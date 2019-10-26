@@ -1,0 +1,178 @@
+// Place all the styles related to the tweets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/*@font-face {
+    font-family: 'font';
+    src: url('font_1_honokamin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+
+/* トップメニュー*/
+
+.top{
+ display:flex;
+ background-color: black;
+ color: white;
+}
+
+body{
+ margin:0;
+}
+
+.title{
+ margin-left:100px;
+ font-family:"font";
+}
+
+
+ul li{
+ list-style-type: none;
+ font-family:"font";
+
+}
+
+a{
+ text-decoration: none;
+}
+.nav{
+ width:100%;
+ padding-top: 30px;
+}
+
+.nav ul{
+ display:flex;
+ justify-content:flex-end;
+}
+
+.nav ul li{
+ flex: 0 1 200px;
+ color: white;
+}
+
+.nav ul li a{
+ color: white;
+}
+
+.nav ul li a:active {
+ color: #f08a00;
+}
+
+.top-image img{
+ margin: 0 auto;
+ max-width: 100%;
+ width: 100vw;
+}
+
+.top-image{
+ margin:0 auto;
+}
+
+.contents_row{
+ display:flex;
+ flex-flow:wrap;
+}
+
+.contents_post{
+ flex:0 0 30%;
+ margin-left: 30px;
+ margin-top: 150px;
+}
+
+.list{
+ margin-top:100px;
+ margin-left:40px;
+}
+
+.list-border{
+ border: 3px solid black;
+}
+
+.more_list{
+ display:flex;
+ justify-content:flex-end;
+ margin:0;
+ margin-top: 305px;
+}
+
+/*
+.current a:active{
+ color: #f00;
+ 
+}
+
+*/
+.more_list li{
+ flex:0 0 100px;
+ text-align: end;
+}
+
+.name{
+ padding-left:40px;
+}
+
+.name p{
+ margin-top:0;
+}
+
+.top a:hover,.top a:active{
+ background-color:orange;
+
+}
+
+
+.btn-square:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  border-bottom: none;/*線を消す*/
+}
+
+/* newの指定 */
+
+.toukou{
+ text-align:center;
+ background-color:lightgray;
+}
+
+/*.new-haikei{
+ background-image: url("<%= s_tizu.png %>");
+}*/
+
+label{
+ display:block;
+}
+
+.render{
+ margin-left: 100px;
+}
+
+.new-form{
+ border-radius: 3px;
+ -moz-box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5);
+ -webkit-box-shadow: inset 1px 4px 9px -6px rgba(0, 0, 0, 0.5);
+ box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5);
+ margin:0 auto;
+}
+
+/* show */
+
+.show-text{
+ margin-left:20px;
+ display: inline-block;
+ background-color: rgba(0,0,0,0.8);
+ color:white;
+}
+
+.contents_post p{
+  margin-bottom: 0;
+}
+
+/* ページ        <% if user_signed_in? && current_user.id == tweet.user_id %>
+ */
+
+.page{
+ margin-top:200px;
+ text-align: center;
+}

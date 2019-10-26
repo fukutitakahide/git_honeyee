@@ -1,0 +1,23 @@
+<div>
+<div class="new-haikei">
+    <%= form_tag( "/tweets" ,method: :post) do %>
+    
+    <h1 class="toukou">
+        投稿する
+    </h1>
+ <div class="render">
+  image
+　<label>
+    <input class="new-form" type="text" name="image" placeholder="Image Url">
+  </label>
+  text
+  <label>
+    <textarea class="new-form"  name="text" placeholder="text" rows="10" cols="30"></textarea>
+  </label>
+  <label>
+    <input type="submit" value="SENT">
+  </label>
+ </div>
+    <% end %>
+</div>
+</div>
