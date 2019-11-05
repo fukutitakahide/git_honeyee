@@ -9,6 +9,13 @@
 }
 */
 
+
+
+h1,p,a{
+  font-family:"arial black";
+
+}
+
 /* トップメニュー*/
 
 .top{
@@ -23,7 +30,7 @@ body{
 
 .title{
  margin-left:100px;
- font-family:"font";
+ font-family:"";
 }
 
 
@@ -81,12 +88,16 @@ a{
 }
 
 .list{
- margin-top:100px;
- margin-left:40px;
+border: 3px solid black;
 }
 
 .list-border{
  border: 3px solid black;
+}
+
+.name-padding{
+ padding-top: 300px;
+ padding-left: 40px;
 }
 
 .more_list{
@@ -94,15 +105,9 @@ a{
  justify-content:flex-end;
  margin:0;
  margin-top: 305px;
+ margin-right: 10px;
 }
 
-/*
-.current a:active{
- color: #f00;
- 
-}
-
-*/
 .more_list li{
  flex:0 0 100px;
  text-align: end;
@@ -129,6 +134,22 @@ a{
   border-bottom: none;/*線を消す*/
 }
 
+.btn-square {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background:#561a1a;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+}
+.btn-square:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  border-bottom: none;/*線を消す*/
+}
+
 /* newの指定 */
 
 .toukou{
@@ -136,9 +157,6 @@ a{
  background-color:lightgray;
 }
 
-/*.new-haikei{
- background-image: url("<%= s_tizu.png %>");
-}*/
 
 label{
  display:block;
@@ -159,10 +177,8 @@ label{
 /* show */
 
 .show-text{
- margin-left:20px;
+ margin-left:40px;
  display: inline-block;
- background-color: rgba(0,0,0,0.8);
- color:white;
 }
 
 .contents_post p{

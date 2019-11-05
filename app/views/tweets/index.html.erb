@@ -21,21 +21,32 @@
                 <li>
                     <%= link_to '削除', "/tweets/#{tweet.id}", method: :delete,class:"btn-square"%>
                 </li>
-            </ul>        
-        </div>
-        
-     <% end %>
-
-        <div class="name">
+            </ul>
+            
+            <div class="name">
         <%= simple_format(tweet.text) %>
             <a href="/users/<%= tweet.user_id %>">
-            <span>投稿者</span><%= tweet.user.nickname %>
+            <span>投稿者&nbsp;&nbsp;</span><%= tweet.user.nickname %>
             </a>
-        </div>
-    </div>
+            </div>
+        </div> <!-- list -->
+        
+        
+        <% else %>
+        <div class="list">
+         <div class="name-padding">
+        <%= simple_format(tweet.text) %>
+            <span>投稿者&nbsp;&nbsp;</span><%= tweet.user.nickname %>
+            </div>
+        </div> <!-- list -->
+        
+     <% end %>
+    
+       
+    </div> <!-- contents_post -->
         <% end %>
     
-  </div>
+  </div> <!--contents_row-->
   
   <div class="page">
 <%= paginate(@tweet) %>
